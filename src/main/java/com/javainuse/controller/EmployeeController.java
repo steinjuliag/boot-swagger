@@ -23,18 +23,12 @@ public class EmployeeController {
 		return employees;
 	}
 
-	@DeleteMapping(path = { "/{id}" })
-	public Employee delete(@PathVariable("id") int id) {
-		Employee deletedEmp = null;
-		for (Employee emp : employees) {
-			if (emp.getEmpId().equals(id)) {
-				employees.remove(emp);
-				deletedEmp = emp;
-				break;
-			}
-		}
-		return deletedEmp;
-	}
+	/*
+	 * @DeleteMapping(path = { "/{id}" }) public Employee delete(@PathVariable("id")
+	 * int id) { Employee deletedEmp = null; for (Employee emp : employees) { if
+	 * (emp.getEmpId().equals(id)) { employees.remove(emp); deletedEmp = emp; break;
+	 * } } return deletedEmp; }
+	 */
 
 	@PostMapping
 	public Employee create(@RequestBody Employee user) {
