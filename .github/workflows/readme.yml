@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Local atual
+        run: echo "${{pwd}}"
       - uses: readmeio/rdme@7.0.2
         with:
           rdme: openapi [./openapi.json] --key=jzfwvqdmHKsEqwZPZ71OnIZTuWOBINzz --id=API_DEFINITION_ID
