@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: readmeio/rdme@vXX
+      - uses: actions/checkout@v3
+      - uses: readmeio/rdme@7.0.1
         with:
           rdme: openapi [file] --key=jzfwvqdmHKsEqwZPZ71OnIZTuWOBINzz --id=API_DEFINITION_ID
