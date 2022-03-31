@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: readmeio/rdme@7.0.1
+      - uses: readmeio/rdme@7.0.2
         with:
-          rdme: openapi [file] --key=jzfwvqdmHKsEqwZPZ71OnIZTuWOBINzz --id=API_DEFINITION_ID
+          rdme: openapi /javainuse-openapi --key=jzfwvqdmHKsEqwZPZ71OnIZTuWOBINzz --id=API_DEFINITION_ID
