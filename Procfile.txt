@@ -1,0 +1,2 @@
+web: java -jar target/boot-swagger-1.0.jar
+cd boot-swagger
