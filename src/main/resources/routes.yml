@@ -1,0 +1,6 @@
+﻿openapi: 3.0.1
+info:
+  title: Grupo
+  contact: {}
+  version: "1.0"
+
