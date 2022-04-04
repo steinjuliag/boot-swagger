@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style>
+  .btn{
+    width: 90px;
+    height: 32px;
+    font-size:13px;
+    background-color: #47AFE8;
+    color: #fff;
+    border: none;
+    margin: 0 2px;
+    border-radius: 2px;
+    cursor:pointer;
+    outline:none;
+  }
+  .txt{
+    width: 100px;
+    height: 30px;
+    font-size:13px;
+    background-color: transparent;
+    border: 1px solid #47AFE8;
+    color: #fff;
+    padding:0 8px;
+    margin: 0 2px;
+    border-radius: 2px;
+    outline:none;
+  }
+  rapi-doc{
+    width:100%;
+  }
+</style>
+
+<script type="module" src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"></script>
+<script>
+  function setApiKey(){
+    const docEl = document.getElementById('thedoc');
+    const keyInputEl = document.getElementById('key-val-input');
+    docEl.setAttribute('api-key-name','api_key');
+    docEl.setAttribute('api-key-location','header');
+    docEl.setAttribute('api-key-value',keyInputEl.value);
+  }
+</script>
+</head>
+<body>
+
+<rapi-doc
+  spec-url="https://boot-swagger.herokuapp.com/javainuse-openapi"
+  allow-authentication ="false"
+>
+  <!--
+    below html is custom html that adds an input field and a button in header
+    on clicking the button the 'api-key-value' is set to the value in input box
+  -->
+  <div slot='header' style='display:flex; margin:0 16px;'>
+    <input class='txt' id='key' type='text' >
+    <button class='btn' onclick='setApiKey()' > Login </button >
+  </div>
+</rapi-doc>
+
+</body>
+</html>
