@@ -30,6 +30,11 @@ public class EmployeeController {
 		return employeesDois;
 	}
 	
+	@RequestMapping(value = "v3/employees", method = RequestMethod.GET, produces = "application/json")
+	public List<Employee> firstPageDoisTres() {
+		return employeesDois;
+	}
+	
 	/*
 	 * @RequestMapping(value = "v3/employees", method = RequestMethod.GET, produces
 	 * = "application/json") public List<Employee> firstPageTres() { return
