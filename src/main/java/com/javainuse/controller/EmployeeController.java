@@ -14,15 +14,31 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javainuse.model.Employee;
 
 @RestController
+@RequestMapping("/employee")
 public class EmployeeController {
 
 	private List<Employee> employees = createList();
+	private List<Employee> employeesDois = createList();
 
 	@RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
 	public List<Employee> firstPage() {
 		return employees;
 	}
-
+	
+	@RequestMapping(value = "v2/employees", method = RequestMethod.GET, produces = "application/json")
+	public List<Employee> firstPageDois() {
+		return employeesDois;
+	}
+	
+	/*
+	 * @RequestMapping(value = "v3/employees", method = RequestMethod.GET, produces
+	 * = "application/json") public List<Employee> firstPageTres() { return
+	 * employeesDois; }
+	 * 
+	 * @RequestMapping(value = "v4/employees", method = RequestMethod.GET, produces
+	 * = "application/json") public List<Employee> firstPageQuatro() { return
+	 * employeesDois; }
+	 */
 	
 	@DeleteMapping(path = { "/{id}" })
 	public Employee delete(@PathVariable("id") int id) {
