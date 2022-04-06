@@ -35,6 +35,11 @@ public class EmployeeController {
 		return employeesDois;
 	}
 	
+	@RequestMapping(value = "v4/employees", method = RequestMethod.GET, produces = "application/json")
+	public List<Employee> firstPagequartro() {
+		return employeesDois;
+	}
+	
 	/*
 	 * @RequestMapping(value = "v3/employees", method = RequestMethod.GET, produces
 	 * = "application/json") public List<Employee> firstPageTres() { return
