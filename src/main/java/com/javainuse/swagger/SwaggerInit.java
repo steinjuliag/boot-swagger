@@ -23,7 +23,7 @@ public class SwaggerInit {
 				            .apis(RequestHandlerSelectors.basePackage("/employee"))
 				            .paths(PathSelectors.any())
 				        .build()
-				        .apiInfo(new ApiInfoBuilder().version("1.0").title("Employee API").description("Documentation Employ API v1.0").build());
+				        .apiInfo(new ApiInfoBuilder().version("1.1").title("Employee API").description("Documentation Employ API v1.0").build());
 		}
 
 	}
